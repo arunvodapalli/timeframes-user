@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.option {
+  min-width: 130px;
+  font-size: 19px;
+  padding : 10px;
+  display : flex;
+  justify-content: center;
+}
+
+.active-link {
+  background: var(--primary-color);
+  color: var(--white)
+}

@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="filters">
+    <div class="filter">
+      <span class="title">Start Date</span>
+      <input type="date" [(ngModel)] = 'start'>
+    </div>
+    <div class="filter">
+      <span class="title">End Date</span>
+      <input type="date" [(ngModel)] = 'end'>
+    </div>
+    <div class="button"><button class="btn" (click) = 'filterFrames()'> Filter </button></div>
+    <div class="filter">
+      <span class="title">Search</span>
+      <input type="text" placeholder="Enter keywords" [(ngModel)]='searchText'>
+    </div>
+  </div>
+  <p class="clear" *ngIf = 'start || end' (click) = 'getTimeFrames();start = null;end = null'>clear filter</p>
+  <div class="frames" *ngIf = '!showSpinner && !noData'>
+    <div class="frame" *ngFor='let t of timeFrames|filter : searchText; let i = index'>
+      <span class="stat"> <span class="title">Start :</span> {{t.start_time | date : 'medium'}} </span>
+      <span class="stat"> <span class="title">End :</span> {{t.end_time | date : 'medium'}} </span>
+      <span class="stat caps"> <span class="title">Duration :</span> {{t.duration}} seconds </span>
+      <span class="caps desc"> <span class="title">Description :</span>  {{t.description}} </span>
+    </div>
+  </div>
+</div>
+<p class="heading" *ngIf = 'showSpinner'><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></p>
+<p class="heading" *ngIf = 'noData'>No data</p>
+

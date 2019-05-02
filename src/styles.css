@@ -1,0 +1,137 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+body {
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+  font-family: Product Sans;
+  font-weight: 500;
+  color: var(--font-color);
+  font-size: 14px;
+  letter-spacing: 0.7px;
+}
+
+div {
+  padding: 0;
+}
+
+:root {
+  --primary-color: #222222;
+  --font: Product Sans;
+  --font-color: #333;
+  --headingFont: 25px;
+  --white: #fff;
+  --border-color: #dee2e6;
+  --border: 1px solid var(--border-color);
+  --disabled-text: #6c757d;
+  --small-font: 12px;
+  --title-font: 15px;
+  --hover: 0px 10px 20px 1px rgba(0, 0, 0, .3);
+}
+
+/* Css Variables */
+
+/* css helpers */
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.caps {
+  text-transform: capitalize
+}
+
+.border {
+  border: var(--border)
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.responsive {
+  width: 100%;
+}
+
+.error {
+  color: var(--red);
+}
+
+.heading {
+  font-size: var(--headingFont);
+  text-align: center;
+  font-weight: 500;
+}
+
+.center {
+  width: 100%;
+  text-align: center
+}
+
+.disabled-text {
+  color: var(--disabled-text)
+}
+
+.small {
+  font-size: var(--small-font)
+}
+
+.link {
+  cursor: pointer;
+}
+
+.striked {
+  text-decoration: line-through;
+}
+
+input,
+select {
+  display: block;
+  border: none;
+  margin: 20px auto;
+  text-align: center;
+  border: 1px solid var(--font-color);
+  padding: 11px 10px;
+  outline: none;
+  border-radius: 5px;
+  transition: 0.35s;
+  font-size: 16px;
+  width: 260px;
+  font-family: var(--font);
+}
+
+.btn {
+  padding: 8px 14px 8px 14px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #fff;
+  color: var(--primary-color);
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  transition: all 0.6s;
+  border-radius: 8px;
+  outline: none;
+  font-family: var(--font);
+  outline: none
+}
+
+.btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn:disabled {
+  background: var(--primary-color);
+  color: var(--white)
+}
+.fa{
+  font-size : 20px
+}

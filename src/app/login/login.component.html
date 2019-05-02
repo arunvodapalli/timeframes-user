@@ -1,0 +1,24 @@
+<p class="heading caps">{{form}}</p>
+<div class="container">
+  <div class="form border login" *ngIf = 'form=="login"'>
+    <input type="text" [(ngModel)] = 'mobile' (keypress) = 'preventChars($event)' placeholder="Enter your mobile number">
+    <input type="password" [(ngModel)] = 'password' placeholder="Enter your password">
+    <div class="button">
+      <button class="btn" [disabled] = 'showSpinner' (click) = 'login()'>Login 
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw" *ngIf = 'showSpinner'></i> 
+      </button>
+      <button class="btn caps" (click) = 'signupClick()'>register here</button>
+    </div>
+  </div>  
+  <div class="form border login" *ngIf = 'form=="signup"'>
+    <input type="text" [(ngModel)] = 'name' placeholder="Enter your name">
+    <input type="text" [(ngModel)] = 'mobile' (keypress) = 'preventChars($event)' placeholder="Enter your mobile number">
+    <input type="password" [(ngModel)] = 'password' placeholder="Enter your password">
+    <div class="button">
+      <button class="btn caps" (click) = 'loginClick()'>login here</button>
+      <button class="btn" [disabled] = 'showSpinner' (click) = 'register()'>Register
+          <i class="fa fa-spinner fa-pulse fa-3x fa-fw" *ngIf = 'showSpinner'></i>
+      </button>
+    </div>
+  </div>  
+</div>

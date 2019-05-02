@@ -1,0 +1,23 @@
+<div class="timer-div border">
+  <div class="timer border">
+    <span class="heading">
+      <span class="optional" *ngIf='minutes<5'>0</span>{{minutes}} :
+      <span class="optional" *ngIf='seconds<5'>0</span>{{seconds}}
+    </span>
+  </div>
+  <div class="options">
+    <button class="btn caps start" *ngIf='!started' (click)='start()'>start</button>
+    <button class="btn caps pause" *ngIf='started' (click)='pause()'>pause</button>
+    <button class="btn caps start" *ngIf='started' (click)='reset()'>reset</button>
+  </div>
+  <div class="description" *ngIf = 'paused'>
+    <p class="desc">Description</p>
+    <textarea name="" class = 'ta' [(ngModel)] = 'description' placeholder="Please provide a description" id="" cols="50" rows="5"></textarea>
+  </div>
+  <div class="cancel" *ngIf = 'paused'>
+    <button class="btn caps submit" [disabled] = 'showSpinner' (click) = 'submit()'>submit
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw" *ngIf = 'showSpinner'></i> 
+    </button>
+    <button class="btn caps cancel" (click) = 'cancel()'>cancel</button>
+  </div>
+</div>

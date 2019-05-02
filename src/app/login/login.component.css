@@ -1,0 +1,17 @@
+.container{
+    display : flex;
+    justify-content: center;
+}
+
+.form{
+    padding : 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.button{
+    display: flex;
+    justify-content: space-evenly;
+}
+
